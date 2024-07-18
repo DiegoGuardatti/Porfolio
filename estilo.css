@@ -147,15 +147,15 @@ html {
 
 #sobremi .contenedor-foto {
     max-width: 400px;
-    margin-right: 80px;
+    margin-right: 190px;
 }
 
-/* #sobremi .contenedor-foto img {
+#sobremi .contenedor-foto img {
     padding: 20px;
-    width: 100%;
+    width: 300%;
     border-radius: 20px;
     background-color: #f3f3f3;
-} */
+}
 
 #sobremi .sobremi {
     margin: 0 40px;
