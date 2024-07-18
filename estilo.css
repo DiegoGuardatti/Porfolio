@@ -521,6 +521,10 @@ p {
     text-decoration-color: #d3d3d3;
     text-decoration-thickness: 5px;
 }
+p{
+    text-align: center;
+    font-size: 16px;
+}
 
 /* #contacto .btn-enviar {
     display: block;
