@@ -151,10 +151,11 @@ html {
 }
 
 #sobremi .contenedor-foto img {
-    padding: 20px;
-    width: 300%;
-    border-radius: 20px;
-    background-color: #f3f3f3;
+    max-width: 80%; /* ajusta el ancho de la imagen a 80% del tamaño de la pantalla */
+    max-height: 80%; /* ajusta la altura de la imagen a 80% del tamaño de la pantalla */
+    object-fit: cover; /* o object-fit: contain */
+    padding: 8px;
+    border-radius: 8px; /* opcional */
 }
 
 #sobremi .sobremi {
@@ -482,11 +483,7 @@ footer a {
         margin: auto;
     }
     #sobremi .contenedor-foto img {
-        max-width: 80%; /* ajusta el ancho de la imagen a 80% del tamaño de la pantalla */
-        max-height: 80%; /* ajusta la altura de la imagen a 80% del tamaño de la pantalla */
-        object-fit: cover; /* o object-fit: contain */
         padding: 8px;
-        border-radius: 8px; /* opcional */
     }
     #sobremi .sobremi .titulo-seccion {
         text-align: center;
