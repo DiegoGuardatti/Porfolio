@@ -484,6 +484,7 @@ footer a {
     #sobremi .contenedor-foto {
         max-width: 100px;
         margin: auto;
+        padding: 10px;
     }
     #sobremi .contenedor-foto img {
         padding: 8px;
