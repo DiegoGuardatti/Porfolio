@@ -449,7 +449,10 @@ footer a {
 
 @media screen and (max-width: 800px) {
     .redes {
-        display: none;
+        .redes {
+            display: flex; /* o block, dependiendo de cómo quieras mostrarlo */
+            justify-content: center; /* opcional, para centrar los elementos */
+        }
     }
     nav {
         display: none;
