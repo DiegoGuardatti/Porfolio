@@ -146,19 +146,16 @@ html {
 }
 
 #sobremi .contenedor-foto {
-    width: 100%;
-    max-width: 400px; /* Ancho máximo en escritorio */
-    margin: auto;
-    overflow: hidden;
-    border-radius: 20px; /* Opcional: agregar bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: agregar sombra */
+    max-width: 400px;
+    margin-right: 80px;
 }
 
 #sobremi .contenedor-foto img {
+    padding: 20px;
     width: 100%;
-    height: auto;
-    display: block;
-    border-radius: inherit; /* Para aplicar el borde redondeado a la imagen */
+    height: 80%;
+    border-radius: 20px;
+    background-color: #f3f3f3;
 }
 
 #sobremi .sobremi {
@@ -287,6 +284,10 @@ html {
 #servicios .fila .servicio p {
     font-size: 14px;
     line-height: 22px;
+}
+.servicios-tag li {
+    font-size: 14px; 
+    font-weight: normal; 
 }
 
 /* *********************/
