@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gracias por contactar a Diego Guardatti">
+    <meta name="author" content="Diego Guardatti">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link rel="stylesheet" href="estilo.css">
+    <title>Gracias por tu Mensaje</title>
+</head>
+<body>
+    <section id="gracias">
+        <div class="contenedor-gracias" data-aos="fade-up">
+            <h2>¡Gracias por tu Mensaje!</h2>
+            <p>Tu mensaje ha sido enviado con éxito. Me pondré en contacto contigo lo antes posible.</p>
+            <a href="index.html" class="btn-volver">Volver al Inicio</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Todos los derechos reservados - <span id="year"></span></p>
+        <div class="redes">
+            <a href="https://github.com/DiegoGuardatti" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/diegoguardatti" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        AOS.init({ duration: 1000 });
+
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+</body>
+</html>

@@ -1,206 +1,219 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Diego Guardatti, Técnico en Desarrollo Web y Aplicaciones Móviles.">
+    <meta name="keywords" content="desarrollo web, aplicaciones móviles, Diego Guardatti, portafolio">
+    <meta name="author" content="Diego Guardatti">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <link rel="stylesheet" href="estilo.css">
-    <title>DG Desarrollador Web</title>
+    <title>Diego Guardatti - Desarrollador Web</title>
 </head>
-
 <body>
-    <!-- SECCION I N I C I O -->
+    <!-- SECCIÓN INICIO -->
     <section id="inicio">
+        <div id="particles-js"></div>
         <div class="contenido">
             <header>
                 <div class="contenido-header">
                     <h1>/DiegoGuardatti/</h1>
-                    <nav id="nav" class="">
+                    <nav id="nav">
                         <ul id="links">
                             <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
-                            <li><a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a></li>
+                            <li><a href="#sobremi" onclick="seleccionar(this)">SOBRE MÍ</a></li>
                             <li><a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a></li>
                             <li><a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a></li>
                             <li><a href="#contacto" onclick="seleccionar(this)">CONTACTO</a></li>
                         </ul>
                     </nav>
-
-                    <!-- Icono del menu responsive -->
-                    <div id="icono-nav" onclick="responsiveMenu()">
+                    <div id="icono-nav" onclick="responsiveMenu()" aria-label="Abrir menú">
                         <i class="fa-solid fa-bars"></i>
                     </div>
-
                     <div class="redes">
-                        <a href="https://github.com/DiegoGuardatti"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/diegoguardatti"><i class="fa-brands fab fa-linkedin"></i></a>
+                        <a href="https://github.com/DiegoGuardatti" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/diegoguardatti" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <button id="dark-mode-toggle" aria-label="Alternar modo oscuro"><i class="fa-solid fa-moon"></i></button>
                     </div>
                 </div>
             </header>
-            <div class="presentacion">
+            <div class="presentacion" data-aos="fade-up">
                 <p class="bienvenida">Bienvenidos</p>
-                <h2>Soy <span>Diego Guardatti</span>, Técnico en Desarrollo Web y Aplicaciones Móviles</h2>
-                <p class="descripcion">Apasionado por la tecnologia. Preparado para desafios.</p>
+                <h2>Soy <span>Diego Guardatti</span>, Técnico en Desarrollo Web</h2>
+                <p class="descripcion">Apasionado por la tecnología. Preparado para desafíos.</p>
                 <a href="#portfolio">Ir a Portafolio</a>
             </div>
         </div>
     </section>
 
-    <!-- SECCION S O B R E M I -->
+    <!-- SECCIÓN SOBRE MÍ -->
     <section id="sobremi">
-        <div class="contenedor-foto">
-            <img src="img/Graduacion_ISPC.webp" alt="">
+        <div class="contenedor-foto" data-aos="fade-right">
+            <img src="img/Graduacion_ISPC.webp" alt="Foto de Diego Guardatti en su graduación" loading="lazy">
         </div>
-        <div class="sobremi">
-            <p class="titulo-seccion">Sobre Mi</p>
-            <h2>Hola, Soy <span>Diego Guardatti</span> </h2>
+        <div class="sobremi" data-aos="fade-left">
+            <p class="titulo-seccion">Sobre Mí</p>
+            <h2>Hola, Soy <span>Diego Guardatti</span></h2>
             <h3>Técnico en Desarrollo Web y Aplicaciones Móviles</h3>
-            <p>Soy un apasionado desarrollador con un enfoque en la creación de experiencias digitales innovadoras y funcionales. Creador de diseño y desarrollo de sitios web a medida, me especializo en la utilización de las últimas tecnologías y mejores prácticas para construir soluciones robustas y eficientes. Mi habilidad para trabajar en equipo y comunicarme eficazmente con los clientes me permite transformar sus ideas en realidad digital de manera efectiva. Siempre estoy buscando nuevos desafíos para expandir mis habilidades y contribuir al éxito de los proyectos en los que participo.</p>    
+            <p>- Creo experiencias digitales innovadoras y funcionales.<br>
+                - Me especializo en tecnologías modernas como Angular y Laravel.<br>
+                - Apasionado por el aprendizaje continuo y los desafíos técnicos.</p>
             <a href="Curriculum_programador.pdf" target="_blank">Descargar CV</a>
-
         </div>
     </section>
 
-    <!-- SECCION S E R V I C I O S -->
+    <!-- SECCIÓN SERVICIOS -->
     <section id="servicios">
-        <h3 class="titulo-seccion">MIS SERVICIOS</h3>
+        <h3 class="titulo-seccion" data-aos="fade-up">Mis Servicios</h3>
         <div class="fila">
-            <div class="servicio">
-                <span class="icono"> <i class="fa-solid fa-code"></i></span>
+            <div class="servicio" data-aos="fade-up" data-aos-delay="100">
+                <span class="icono"><i class="fa-solid fa-code"></i></span>
                 <h4>Diseño de Sitios Web</h4>
                 <hr>
                 <ul class="servicios-tag">
-                    <li>Wordpress</li>
-                    <li>Html</li>
+                    <li>WordPress</li>
+                    <li>HTML</li>
                     <li>Bootstrap</li>
                 </ul>
-                <p>Desarrollo sitios funcionales e innovadores</p>
+                <p>Desarrollo sitios funcionales e innovadores.</p>
             </div>
-            <div class="servicio">
+            <div class="servicio" data-aos="fade-up" data-aos-delay="200">
                 <span class="icono"><i class="fa-solid fa-file-code"></i></span>
                 <h4>Desarrollador Fullstack</h4>
                 <hr>
                 <ul class="servicios-tag">
                     <li>Frontend</li>
                     <li>Backend</li>
-                    
                 </ul>
-                <p>Para que tu sitio tenga un Backend sólido</p>
+                <p>Para que tu sitio tenga un Backend sólido.</p>
             </div>
-            <div class="servicio">
+            <div class="servicio" data-aos="fade-up" data-aos-delay="300">
                 <span class="icono"><i class="fa-solid fa-arrow-trend-up"></i></span>
                 <h4>Habilidades</h4>
                 <hr>
                 <ul class="servicios-tag">
-                    <li>ANGULAR</li>
-                    <li>LARAVEL</li>
-                    <li>GITHUB</li>
-                    <li>PYTHON</li>
-                    
+                    <li>Angular</li>
+                    <li>Laravel</li>
+                    <li>GitHub</li>
                 </ul>
-                <p>Capacitándome y adaptándome a los cambios</p>
+                <p>Capacitándome y adaptándome a los cambios.</p>
             </div>
         </div>
         <div class="fila">
-            <div class="servicio">
+            <div class="servicio" data-aos="fade-up" data-aos-delay="100">
                 <span class="icono"><i class="fa-solid fa-database"></i></span>
                 <h4>Alojamiento de Sitios</h4>
                 <hr>
                 <ul class="servicios-tag">
                     <li>Hosting</li>
-                    <li>Dominios.AR</li>
+                    <li>Dominios</li>
                     <li>Mantenimiento</li>
                 </ul>
-                <p>Nos ocupamos del hosting, el dominio y el mantenimiento del sitio</p>
+                <p>Nos ocupamos del hosting y mantenimiento.</p>
             </div>
-            <div class="servicio">
+            <div class="servicio" data-aos="fade-up" data-aos-delay="200">
                 <span class="icono"><i class="fa-solid fa-palette"></i></span>
-                <h4>Desarrollo de Apps moviles</h4>
+                <h4>Desarrollo de Apps Móviles</h4>
                 <hr>
                 <ul class="servicios-tag">
                     <li>Android Studio</li>
                 </ul>
-                <p>Creamos aplicaciones moviles a tu medida</p>
+                <p>Creamos aplicaciones móviles a medida.</p>
             </div>
-            <div class="servicio">
+            <div class="servicio" data-aos="fade-up" data-aos-delay="300">
                 <span class="icono"><i class="fa-solid fa-person-circle-question"></i></span>
                 <h4>Consultor Externo</h4>
                 <hr>
                 <ul class="servicios-tag">
+                    <li>Asesoramiento</li>
                 </ul>
-                <p>Prestamos servicios de consultoría y asesoramiento en general</p>
+                <p>Servicios de consultoría profesional.</p>
             </div>
         </div>
     </section>
 
-    <!-- SECCION PORTAFOLIO -->
+    <!-- SECCIÓN PORTFOLIO -->
     <section id="portfolio">
-        <h3 class="titulo-seccion">Mis Proyectos</h3>
+        <h3 class="titulo-seccion" data-aos="fade-up">Mis Proyectos</h3>
         <div class="fila">
-            <div class="proyecto">
+            <div class="proyecto" data-aos="zoom-in">
                 <div class="overlay"></div>
-                <img src="img/InstitutoDanzas.png" alt="">
+                <img src="img/InstitutoDanzas.png" alt="Instituto de danzas" loading="lazy">
                 <div class="info">
-                    <h4>Instituto de danzas</h4>
-                    <p>Proyecto realizado Html y Flask</p>
+                    <h4>Instituto de Danzas</h4>
+                    <p>HTML, Flask</p>
                 </div>
             </div>
-            <div class="proyecto">
+            <div class="proyecto" data-aos="zoom-in" data-aos-delay="100">
                 <div class="overlay"></div>
-                <img src="img/MuniLibertadorJujuy.jpg" alt="">
+                <img src="img/MuniLibertadorJujuy.jpg" alt="Registro de multas" loading="lazy">
                 <div class="info">
-                    <h4>Registro de multas</h4>
-                    <p>Proyecto en Laravel</p>
+                    <h4>Registro de Multas</h4>
+                    <p>Laravel</p>
                 </div>
             </div>
-            <div class="proyecto">
+            <div class="proyecto" data-aos="zoom-in" data-aos-delay="200">
                 <div class="overlay"></div>
-                <img src="img/libreriaIN47portada.png" alt="">
+                <img src="img/libreriaIN47portada.png" alt="Librería IN47" loading="lazy">
                 <div class="info">
-                    <h4>Libreria In47</h4>
-                    <p>Proyecto realizado en Angular y Django</p>
-                </div>
-            </div>
-            <div class="proyecto">
-                <div class="overlay"></div>
-                <img src="img/HCPportada.png" alt="">
-                <div class="info">
-                    <h4>Registro de Historial Médico</h4>
-                    <p>Proyecto realizado en Angular y Django</p>
+                    <h4>Librería IN47</h4>
+                    <p>Angular, Django</p>
                 </div>
             </div>
         </div>
         <div class="fila">
-            <div class="proyecto">
+            <div class="proyecto" data-aos="zoom-in">
                 <div class="overlay"></div>
-                <img src="img/LibreriaIn47App.png" alt="">
+                <img src="img/HCPportada.png" alt="Historial médico" loading="lazy">
                 <div class="info">
-                    <h4>Aplicación móvil</h4>
-                    <p>Libreria In47 App</p>
+                    <h4>Registro Médico</h4>
+                    <p>Angular, Django</p>
+                </div>
+            </div>
+            <div class="proyecto" data-aos="zoom-in" data-aos-delay="100">
+                <div class="overlay"></div>
+                <img src="img/LibreriaIn47App.png" alt="App Librería IN47" loading="lazy">
+                <div class="info">
+                    <h4>Librería IN47 App</h4>
+                    <p>Android Studio</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCTION C O N T A C T O -->
+    <!-- SECCIÓN CONTACTO -->
     <section id="contacto">
-        <h3 class="titulo-seccion">contacto</h3>
-        <p><a href="mailto:dguardatti@gmail.com">dguardatti@gmail.com</a></p>
+        <h3 class="titulo-seccion" data-aos="fade-up">Contacto</h3>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contenedor-form" data-aos="fade-up" data-aos-delay="100" id="contact-form">
+            <input type="hidden" name="access_key" value="6dc71bc2-9d42-48f8-8823-3ff4494cb646">
+            <input type="hidden" name="subject" value="Nuevo Mensaje desde Portafolio">
+            <input type="hidden" name="redirect" value="http://localhost:5500/gracias.html">
+            <input type="checkbox" name="botcheck" style="display: none;">
+            <div class="fila mitad">
+                <input type="text" name="name" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Correo" required>
+            </div>
+            <div class="fila">
+                <textarea name="message" placeholder="Mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
     </section>
 
-    <!-- SECCION FOOTER -->
+    <!-- SECCIÓN FOOTER -->
     <footer>
-        <p>Todos los derechos reservados - 2024</p>
+        <p>Todos los derechos reservados - <span id="year"></span></p>
         <div class="redes">
-            <a href="https://github.com/DiegoGuardatti"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/diegoguardatti"><i class="fa-brands fab fa-linkedin"></i></a>
+            <a href="https://github.com/DiegoGuardatti" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/diegoguardatti" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
         </div>
-
     </footer>
 
+    <button id="scroll-top" aria-label="Volver arriba">↑</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>

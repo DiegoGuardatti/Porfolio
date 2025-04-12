@@ -1,42 +1,48 @@
-//Función que me aplica el estilo a la opciòn seleccionada y quita la previamente seleccionada
 function seleccionar(link) {
-    var opciones = document.querySelectorAll('#links  a');
-    opciones[0].className = "";
-    opciones[1].className = "";
-    opciones[2].className = "";
-    opciones[3].className = "";
-    opciones[4].className = "";
+    var opciones = document.querySelectorAll('#links a');
+    opciones.forEach(opcion => opcion.className = "");
     link.className = "seleccionado";
-
-    //Hacemos desaparecer el menu una vez que se ha seleccionado una opcion
-    //en modo responsive
     var x = document.getElementById("nav");
     x.className = "";
 }
 
-//función que muestra el menu responsive
 function responsiveMenu() {
     var x = document.getElementById("nav");
-    if (x.className === "") {
-        x.className = "responsive";
-    } else {
-        x.className = "";
-    }
+    x.className = x.className === "" ? "responsive" : "";
 }
 
-//detecto el scrolling para aplicar la animación del la barra de habilidades
-// window.onscroll = function() { efectoHabilidades() };
+document.getElementById("year").textContent = new Date().getFullYear();
 
-//funcion que aplica la animación de la barra de habilidades
-// function efectoHabilidades() {
-//     var skills = document.getElementById("skills");
-//     var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-//     if (distancia_skills >= 300) {
-//         document.getElementById("html").classList.add("barra-progreso1");
-//         document.getElementById("js").classList.add("barra-progreso2");
-//         document.getElementById("bd").classList.add("barra-progreso3");
-//         document.getElementById("ps").classList.add("barra-progreso4");
-//         document.getElementById("wp").classList.add("barra-progreso5");
-//     }
+document.getElementById('dark-mode-toggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+});
 
-// }
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+
+window.addEventListener('scroll', () => {
+    document.getElementById('scroll-top').classList.toggle('show', window.scrollY > 300);
+});
+
+document.getElementById('scroll-top').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+particlesJS('particles-js', {
+    particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#ff5080" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5, random: true },
+        size: { value: 3, random: true },
+        move: { enable: true, speed: 2, direction: "none", random: false }
+    },
+    interactivity: {
+        events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" } },
+        modes: { repulse: { distance: 100 }, push: { particles_nb: 4 } }
+    }
+});
+
+AOS.init({ duration: 1000 });
